@@ -1,0 +1,69 @@
+body {
+	background-image: url('../images/KTBackground.png');
+	background-repeat: no-repeat; 
+	background-position: top center; 
+	background-color: red;
+	line-height:1; 
+	background-color: rgb(230, 224,236);
+	font-family: 'Roboto', sans-serif;
+}
+
+* {
+	border: 2px solid blue;
+}
+
+.container {
+	width: 650px; 
+	margin: 0 auto;
+}
+
+div {
+	display: block;
+}
+
+.input {
+	width: 500px; 
+	margin: 0 auto;
+	text-align: center;
+	background: url('');} 
+
+	/*this will be the lined notepad */
+
+.list {
+	width: 200px; 
+	height: 400px; 
+	background-color: orange;
+	z-index: 999;
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 100px;
+}
+
+#list li {
+	font-size: 24px; 
+	font-weight: bold; 
+	cursor: pointer; 
+}
+
+li {
+	display: list-item; 
+	text-align: -webkit-match-parent;
+}
+
+#list {
+	margin-top: 0; 
+	padding: 5px 5px 5px 15px; 
+	text-align: left; 
+	list-style: none; 
+}
+
+
+.input {
+	width: 500px; 
+	margin: 0 auto; 
+	border-radius: 2px; 
+	text-align: center;
+	background-image: url('images/lines.png');
+}
+
+
