@@ -1,49 +1,27 @@
 $(document).ready(function(){
 
 
-
-	//use enter to add list items
-	$('#item').keyup(function(event){ 
-		if(event.keyCode == 13) {
-			event.preventDefault(); 
-			$('#add').click();
-
-		}; 
-	}); 
-
-	//add list items
-	$('#add').click(function(){
-		var txtbox = document.getElementById('item'); 
-		var txtval = txtbox.value; 
-		event.preventDefault(); 
-
-	if (!$.trim ($('#item').val())) {
-		alert('Please enter text to add to the list');
-	} else {
-		$('<li class="items"> </li>').appendTo('#list').html('<div class="box"> </div> <span>' + txtval + '</span> <img class="delete" src="images/delete.png"/>'); 
+	//use enter to add list items (w/2 boxes)
 	
-	document.getElementById('item').value = ''; 
-	}; 
 
+	//use click to add list items (w/2 boxes)
+	$('#add').click(function(){
+		$('.items').append('<input id="item"> </input>')
+	});
 
-	//delete list items
-	$('#list').on('click', '.delete', funciton(e){
-		e.preventDefault(); 
-			$(this).parent().remove();
-			 }); 
+	//strike through li when check box clicked
+	$('.check').click(function() {
+		$(this).siblings('span').css('text-decoration', 'line-through');
+		}); 
+	
 
-	//cross off list items
-	$('#list').on('click', 'li', function(){$(this).toggleClass('strike'); $(this).children('.box').toggleClass('Checked'); });
+	//hide elements when click delete
+	$('.delete').click(function(){
+		$(this).siblings('span').slideUp();	
+	});
 
-
-	//sortable list items
-		$('#list').sortable({axis:"y"}); 
-
-	//show delete button on mouse hover
-		$('#list').on('mouseenter', 'li', function(){$(this).children('.delete').toggleClass('show'); }); 
-		$('#list').on('mouseleave', 'li', function(){$(this).children('.delete').toggleClass('show'); }); 	
-
-
+	//make list elements .items draggable
+		$('.items').draggable();
 
 
 

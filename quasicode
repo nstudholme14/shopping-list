@@ -6,3 +6,6 @@ when user clicks image class "delete" --> item next to it is removed
 when user clicks image class "check" --> item next to it (to R) is strikethrough
 
 when user clicks and drags li class "items" --> draggable
+
+
+if the item has been there for a day, turn red
